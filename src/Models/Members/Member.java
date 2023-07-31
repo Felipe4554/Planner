@@ -4,11 +4,13 @@
  */
 package Models.Members;
 
+import Models.Entity;
+
 /**
  *
  * @author ´Felipe Chacón
  */
-public class Member {
+public class Member implements Entity {
  private String id;
  private String name;
  private String phone;
@@ -66,4 +68,14 @@ public class Member {
     public String toString() {
         return "Cedula=" + id + ", Nombre=" + name + ", Telefono=" + phone + ", Correo=" + email + ", Rol=" + role + '}';
     }
+    
+    @Override
+     public boolean isComplete() {
+        return !this.id.equals("") && !this.name.equals("") &&!this.email.equals("");
+     }
+
+     @Override
+     public Object[] toArrayObject() {
+        return new Object[]{this.id,this.name,this.phone,this.email,this.role.toString()};
+     }
 }
