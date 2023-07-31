@@ -30,13 +30,7 @@ public class MemberList implements List<Member> {
     }
 
     public boolean update(Member obj) {
-        if (obj != null && obj.getId() != null && !obj.getId().isEmpty()) {
-            if (members.containsKey(obj.getId())) {
-                members.put(obj.getId(), obj);
-                return true;
-            }
-        }
-        return false;
+        return insert(obj); 
     }
 
     @Override
