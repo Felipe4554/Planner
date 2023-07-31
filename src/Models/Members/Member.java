@@ -5,6 +5,7 @@
 package Models.Members;
 
 import Models.Entity;
+import static Models.Members.Role.COLABORADOR;
 
 /**
  *
@@ -42,7 +43,7 @@ public class Member implements Entity {
  //Constructores
     
 //Constructor 1
- public Member(String id, String name, String phone, String email, Role role) {
+    public Member(String id, String name, String phone, String email, Role role) {
         this.id = id;
         this.name = name;
         this.phone = phone;
@@ -54,14 +55,19 @@ public class Member implements Entity {
     public Member(String id, String name, String email, Role role) {
         this.id = id;
         this.name = name;
+        this.phone = " ";
         this.email = email;
         this.role = role;
-    }
+ }
  
 //Constructor 3
     public Member(String id) {
         this.id = id;
-    }
+        this.name = "";
+        this.phone = "";
+        this.email = "";
+        this.role = COLABORADOR;
+ }
 
 
     @Override
