@@ -9,5 +9,9 @@ package Models.Members;
  * @author ´Felipe Chacón
  */
 public enum Role {
-    
+LIDER,
+COORDINADOR,
+ESPECIALISTA,
+COLABORADOR;
 }
+
