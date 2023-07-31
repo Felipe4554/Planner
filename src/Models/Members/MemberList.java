@@ -54,5 +54,11 @@ public class MemberList implements List<Member> {
     public Member[] toArray() {
         return members.values().toArray(new Member[0]);
     }
+    
+     public void showAll(){
+         for (Member member : members.values()){
+             System.out.println(member);
+         }
+ }
 }
 
