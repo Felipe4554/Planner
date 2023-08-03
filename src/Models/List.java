@@ -9,6 +9,7 @@ package Models;
  * @author ´Felipe Chacón
  */
 public interface List<Type> {
+public boolean update(Type obj);
 public boolean insert(Type obj);
 public boolean delete(Type obj);
 public Type search(Object id);

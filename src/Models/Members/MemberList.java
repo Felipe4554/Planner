@@ -12,11 +12,22 @@ import java.util.HashMap;
  * @author ´Felipe Chacón
  */
 public class MemberList implements List<Member> {
-
+    
+    //Patron de diseño singleton
+    private static MemberList memberList;
+    
     // HashMap to store members
     private HashMap<String, Member> members;
 
-    public MemberList() {
+    
+    public static MemberList getInstance(){
+        if(memberList == null){
+            memberList = new MemberList();
+        }
+        return memberList;
+    }
+    
+    private MemberList() {
         members = new HashMap<>();
     }
 

@@ -16,11 +16,11 @@ import View.View;
 public class MemberControler implements Controler<Member> {
     // Atributos de la clase
     private MemberList list; // Atributo MemberList
-    private View<Member> view; // Atributo View
+    private View view; // Atributo View
 
     // Constructor que recibe una instancia de la vista para interactuar con ella
-    public MemberControler(View<Member> view) {
-        this.list = new MemberList(); // Crear una nueva instancia de MemberList
+    public MemberControler(View view) {
+        list = MemberList.getInstance(); // Crear una nueva instancia de MemberList
         this.view = view; // Asignar la vista proporcionada al atributo view
     }
 
