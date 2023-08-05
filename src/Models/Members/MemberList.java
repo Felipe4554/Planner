@@ -13,13 +13,13 @@ import java.util.HashMap;
  */
 public class MemberList implements List<Member> {
     
-    //Patron de diseño singleton
+    // Patron de diseño singleton
     private static MemberList memberList;
     
-    // HashMap to store members
+    // HashMap para almacenar los miembros
     private HashMap<String, Member> members;
 
-    
+    // Método estático para obtener la instancia única de la lista de miembros    
     public static MemberList getInstance(){
         if(memberList == null){
             memberList = new MemberList();
