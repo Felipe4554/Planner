@@ -9,6 +9,7 @@ import Controler.MemberControler;
 import Models.Members.Member;
 import Models.Members.Role;
 import Views.View;
+import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -386,21 +387,21 @@ private void loadRoles() {
     }//GEN-LAST:event_btnSearchActionPerformed
 
     private void tblMembersMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblMembersMouseClicked
-//        if (evt.getClickCount() == 2) { // Verificar si hubo 2 clics (doble clic)
-//            int row = this.tblMembers.getSelectedRow();
-//            Object id = tblMembers.getValueAt(row, 0);
-//            this.controler.read(id);
-//        }
+        if (evt.getClickCount() == 2) { // Verificar si hubo 2 clics (doble clic)
+            int row = this.tblMembers.getSelectedRow();
+            Object id = tblMembers.getValueAt(row, 0);
+            this.controller.read(id);
+        }
     }//GEN-LAST:event_tblMembersMouseClicked
 
     private void tblMembersKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tblMembersKeyReleased
-//        if (evt.getKeyCode()==KeyEvent.VK_DELETE){
-//            int row = this.tblMembers.getSelectedRow();
-//            if (row>-1){
-//                Object id = tblMembers.getValueAt(row, 0);
-//                this.controler.delete(new Member(id.toString()));
-//            }
-//        }
+        if (evt.getKeyCode()==KeyEvent.VK_DELETE){
+            int row = this.tblMembers.getSelectedRow();
+            if (row>-1){
+                Object id = tblMembers.getValueAt(row, 0);
+                this.controller.delete(new Member(id.toString()));
+            }
+        }
     }//GEN-LAST:event_tblMembersKeyReleased
 
     private void txtFiltroKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtFiltroKeyReleased
@@ -430,6 +431,5 @@ private void loadRoles() {
     private javax.swing.JFormattedTextField txtPhone;
     private javax.swing.JComboBox<String> txtRole;
     // End of variables declaration//GEN-END:variables
-
 
 }
