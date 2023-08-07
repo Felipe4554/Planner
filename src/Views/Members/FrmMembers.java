@@ -8,6 +8,7 @@ import Controler.Controler;
 import Controler.MemberControler;
 import Models.Members.Member;
 import Models.Members.Role;
+import Views.Table;
 import Views.View;
 import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
@@ -405,7 +406,7 @@ private void loadRoles() {
     }//GEN-LAST:event_tblMembersKeyReleased
 
     private void txtFiltroKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtFiltroKeyReleased
-        // TODO add your handling code here:
+        Table.filter(this.tblMembers, txtFiltro.getText());
     }//GEN-LAST:event_txtFiltroKeyReleased
 
 
