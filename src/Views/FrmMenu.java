@@ -4,6 +4,7 @@
  */
 package Views;
 
+import Data.Data;
 import Views.Members.FrmMembers;
 
 
@@ -19,6 +20,7 @@ public class FrmMenu extends javax.swing.JFrame {
     public FrmMenu() {
         initComponents();
         View.maximize(this);
+        Data.loadMembers();
         //Cargar datos utilizando clase Data.
     }
 
