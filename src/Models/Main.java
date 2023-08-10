@@ -6,7 +6,9 @@ package Models;
 
 /**
  *
+
  * @author rsand
+
  */
 public class Main {
 
@@ -14,7 +16,12 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        System.out.println("Ronny");
+        
         // TODO code application logic here
+
+        System.out.println("Felipe Chacón Vargas");
+
     }
     
 }
